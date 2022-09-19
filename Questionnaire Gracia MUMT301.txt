@@ -1,0 +1,39 @@
+MUMT301-2021 Assignment 1
+QUESTIONNAIRE!
+
+The following questionnaire seeks to understand your previous knowledge about some of the concepts that we will learn in class during the coming term.
+
+1. Do you know any programming languages? If you do, which ones?
+I'm familiar with the basics of python - but that's about it :) 
+
+2. What is your primary computer operating system (OS)?
+I have a Mac which operates on MacOS.
+
+3. Do you own a smartphone, tablet, or mobile device? What is your favourite OS for mobile devices?
+I am an apple user for all of my electronics, and all of them operate on the mobile operating system Apple iOS. 
+
+4. Do you use any social networking services? If you do, which ones? Why?
+I use a variety of social networking services such as twitter, instagram, bereal, youtube, tiktok, pinterest, spotify, lastfm, lettrboxd and whatsapp. Most are using for communication with people I already know, others such as twitter, tumblr and tiktok to participate in online communities centered around my interests. SNS'S such as YouTube and Pinterest (and Spotify if considered sns) can be used educationally, artistically and as a means of finding and experiencing media. 
+
+5. Expand the following acronyms and do research about their meaning. You may look them up if you don't know:
+
+    HTTP: Hypertext Transfer Protocol. This refers to the set of rules, or the application protocol for the information systems which allow people and programs to transfer media, information and files across the web.
+    REST: Representational state transfer. This is a software architectural style that describes a uniform interface between physically separate components in order to ensure interoperability between different internet systems 
+    API: Application Programming Interface. This is a software intermediary which allows two applications to talk to eachother. 
+
+6. Do you play a musical instrument or sing? If so, how much experience do you have?
+I am a classically trained cellist with approximately 10 years of experience. I quit playing upon getting ready to graduate and entering university, but I have recently picked it up again (or have been trying to).
+
+7. Can you read music notation? If so, how well?
+Studying music theory and the cello over time have made me fluent in music notation. 
+
+8. How large is your personal music collection? Estimate the number of artists, albums, and songs. If instead you listen to music using streaming services, how many playlists, artists, albums, and songs do you have in your account?
+My physical music collection consists of approximately 60 cds. My online music library is based in Spotify which I started using approximately two years ago, and now I have 4,335 liked songs, 99 playlists - 56 created (mostly the way in which I listen to music), 82 followed artists and 625 saved albums.
+ 
+
+9. How do you search and find new music? How do you think this affects the types of artists that you end up listening to?
+My main mode of discovering new music relies on spotify radio and the suggestions that come up as you're making a playlist, as well as suggestions on the Spotify homepage based on my enjoyment of other artists. I also learn about a lot of music from friends/family who have a similar taste in music as me (shared playlists or just recommendations), social media and more. This probably means that most of the music I find and end up listening to is within the same realm of what I already listen to, and that I would end up sticking to the same genres I already enjoy/people know I enjoy rather than venturing out very often. 
+
+10. Name two musical artists that you like. What do you find interesting about their music that makes you like them?
+Sheena Ringo: Her discography over the years has accumulated all the genres I like - she has a very theatrical and experimental approach to blending jazz, rock, punk and electronica in her solo and band work. 
+Nick Drake: I really enjoy how personal and earthy his music feels - being mostly centred on acoustic guitar playing and his vocals, the melody and the story of his music shines through very clearly to me. 
