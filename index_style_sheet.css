@@ -1,15 +1,22 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(Alice_in_Wonderland_3.ttf);
+  }
+
 h1 {
+    font-family: 'myFirstFont';
+    font-size: 60px;
     color: black;
     text-align: center;
-
 }
+
 h2 {
     color: black;
     text-align: left;
 }
 
 body {
-    color: rgb(209, 238, 248);
+    color: rgb(0, 0, 0);
+    background-color: rgb(234, 244, 252);
 }
 
-.box
