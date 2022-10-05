@@ -65,15 +65,16 @@ ul li a:hover::after{
 }
 .right-column img{
     position: relative;
-    width: 100%;
+    width: 130%;
     height: 100%;
-
+    top: 0px;
+    object-fit: contain;
 }
 
 .left-column h1{
     font-family: 'Londrina Sketch';
     font-size: 400%;
-    margin: 1px 0;
+    margin: 0px 0;
 }
 
 .left-column h2{
@@ -147,7 +148,7 @@ span{
 .discogbox{
     width: 100%;
     height: 100vh;
-    background: #000000;
+    background: #191919;
     padding: 10px 3%;
     position: relative;
     display: flex;
@@ -156,18 +157,22 @@ span{
 }
 
 .discogbox h2{
-    font-size: 17px;
+    font-size: 16px;
     margin-left: 20px;
     position: relative;
     z-index: 2;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgb(102, 82, 189);
     cursor: pointer;
     transition: transform 0.5s;
-    
+
 }
+.discogbox h2:visited{
+    text-decoration: none; color:rgb(111, 85, 223);
+}
+
 .discogbox h2:hover{
-    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(111, 85,);
     transform: translateY(-10px);
 }
 
@@ -176,9 +181,9 @@ span{
     top: 0;
     right: 0;
     height: 100%;
-    width: 60%;
-    background-image: url(img/);
-    background-size: cover;
+    width: 100%;
+    background-image: url(img/radiohead\ poster.jpg);
+    background-size: contain;
     background-position: center;
     transition: background-image 1s;
 }
