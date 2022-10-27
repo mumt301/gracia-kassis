@@ -118,6 +118,7 @@ th {
 
 td {
     text-align: center;
+    text-decoration: none;
     font-family: sans-serif;
     font-weight: bold;
     background-color:rgb(250, 243, 251)
@@ -129,13 +130,14 @@ table, th, td {
     margin: 25px 0;
     font-size: 0.9em;
     min-width: 100px;
-    padding: 2px 2px;
+    padding: 10px 4px;
     border-bottom: 1px solid rgb(239, 206, 243);
     border-left: rgb(239, 206, 243);
     border-bottom: 2px solid rgb(239, 206, 243);
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.17);
+    text-decoration: none;
 
 }
 
