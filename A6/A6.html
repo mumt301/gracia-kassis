@@ -1,0 +1,100 @@
+<html><head>
+    <title>MusicBrainz API Call</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <!-- <link rel="stylesheet" href="https://minicss.org/flavorFiles/mini-default.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div>
+        <h2>Discog Generator!</h2>
+        <p>Retrieve the discography for a particular artist:</p>
+
+        <form id="artist" method="GET">
+            <label for="name"> What is your artist's name?</label>
+            <input type="text" name="artist" id="name">
+            <input type="submit" value="Get their MBID!">
+        </form>
+        <p id="placeholder"></p>
+    </div>
+
+    <script type="text/JavaScript">
+        function getResults()
+         {
+            let params = (new URL(document.location)).searchParams;
+            if (params.has('artist')) 
+            {
+                let artistName = params.get('artist');
+                console.log(artistName);
+
+                let mbBaseURL = "https://musicbrainz.org/ws/2/artist?query=";
+               
+                let queryURL = mbBaseURL + artistName;
+                console.log(queryURL);
+                httpGet(queryURL, getMBID);
+
+            }
+        }
+
+        function httpGet(theURL, cbFunction)
+         {
+
+            let xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", theURL);
+            xmlHttp.onreadystatechange = function () 
+            {
+            if (this.readyState == 4 && this.status == 200) {
+                cbFunction(this); 
+            }
+            };
+
+            xmlHttp.send();
+
+
+        }
+
+
+        function getMBID(xhttp) 
+        {
+            let retrievedData = xhttp.responseXML; 
+            console.log(retrievedData);
+            
+            let artistData = retrievedData.getElementsByTagName('artist')[0];
+            console.log(artistData);
+            let artistName = artistData.getElementsByTagName('name')[0].innerHTML;
+            console.log(artistName);
+            let artistMBID = artistData.id;
+            console.log(artistMBID);
+            let mbBaseURL = "https://musicbrainz.org/ws/2/release-group?artist=";
+            let queryURL = mbBaseURL + artistMBID;
+            console.log(queryURL);
+            httpGet(queryURL, getalbum_names);
+            getalbum_names(artistMBID)
+        }
+
+        function getalbum_names(xhttp) 
+        {
+            let retrievedData = xhttp.responseXML;
+            console.log(retrievedData);
+            let album_names=retrievedData.getElementsByTagName('release-group');
+            let placeholder = document.getElementById('placeholder');
+            let table = "<table><tr><th>Titles</th><th> Date of Release</th></tr>";
+                for (let row = 0; row <album_names.length; row++)
+
+            {
+                let data= album_names [row];
+                let AlbumNames = data.getElementsByTagName("title")[0].innerHTML;
+                console.log(AlbumNames)
+                let AlbumRelease = data.getElementsByTagName("first-release-date")[0].innerHTML;
+                console.log(AlbumRelease);
+                table += "<tr><td>" + AlbumNames + "</td>" + "<td>" + AlbumRelease + "</td><tr>"
+            }
+
+            table +="</table>"
+            placeholder.innerHTML = table;
+        }
+        window.onload = getResults;
+    </script>
+
+
+</body></html>
