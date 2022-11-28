@@ -5,39 +5,74 @@ function thereminOn(oscillator) {
     oscillator.play(); oscillatorb.play();
 }
 
+let autotune = false
+
 // Control the theremin: Had to add the new functions in here.
-function thereminControl(e, oscillator, oscillatorb, minfrequencyType, maxfrequencyType, notename, freqRange, theremin) {
+function thereminControl(e, oscillator, oscillatorb, minfrequencyType, maxfrequencyType, notename, freqRange, theremin){
     let x = e.offsetX;
     let y = e.offsetY;
     console.log(x, y);
-
+    
     let minFrequency = 220.0;
     let maxFrequency = 880.0;
     let freqRange = maxFrequency - minFrequency;
-    let thereminFrequency = minFrequency + (x / theremin.clientWidth) * freqRange;
-    let thereminVolume = 1.0 - (y / theremin.clientHeight);
+    let thereminFreq = minFrequency + (x / theremin.clientWidth) * freqRange;
+    let thereminVolume = 1.0 - (y / theremin.clientHeight);}
 
+function autotune(frequency,oscillator)
+    var checkBox = document.getElementById("myCheck");
+    if (checkBox.checked == true){
+            autotune = true;
+            console.log("You've turned autotune on" + autotune);}
+    else {
+        autotune=false;
+        console.log("The autotune is off")
+    }
+
+    if (autotune==true){
+        let midiNoteNumber = frequencyToMidi(frequency)
+        let TunedNote=Math.round(midiNoteNumber)
+        let TunedFrequency = midiToFrequency(TunedNote)
+        let NoteName = noteFromFrequency(TunedFrequency)
+        document.getElementById("FrequencyOutput").innerHTML="The frequency playing is : "+ Math.round(TunedFrequency*100)/100
+        document.getElementById("NoteOutput").innerHTML="The note playing is : "+ notename
+        oscillator.frequency=TunedFrequency;
+
+        let noteName = TunedNote(thereminFreq)
+        let notefrequency = TunedFrequency(thereminFreq)
+
+        placeholder1.innerHTML = `Frequency: ${thereminFreq.toFixed(2)}`;
+        placeholder2.innerHTML = `Note: ${noteName}`;
+    } 
+
+if (autotune == false){
     console.log("Frequency: ", thereminFreq);
     oscillator.frequency = thereminFreq;
     console.log("Volume: ", thereminVolume);
     oscillator.volume = thereminVolume;
+    let notename = noteFromFrequency
+    let midinumber = frequencyToMidi
 
     oscillatorb.frequency=interval(thereminFreq, semitonesType);
     notefrequency.innerHTML = "The frequency of Oscillator 1 is" + (thereminFreq);
+    
     notename.innerHTML = "This Note is" + noteFromFrequency(thereminFreq);
     freqrange.innerHTML = "Frequency Range " + (freqRange);
+   
+    placeholder1.innerHTML = `Frequency: ${thereminFreq.toFixed(2)}`;
+    placeholder2.innerHTML = `Note: ${noteName}`;
 }
 
 // Turn theremin off
-function thereminOff(oscillator) {
-    oscillator.stop(); oscillatorb.stop();
+function thereminOff(oscillator, oscillatorb) {
+    oscillator.stop(); 
+    
 }
 //Had to insert an additional stop for the second oscillator.
 
 //if statement sample
 //if (condition) {
     //  block of code to be executed if the condition is true}
-
 
 //Adding functions for the different modulators in the form through url Parameters.
 function runAfterLoadingPage() {
@@ -71,7 +106,6 @@ const oscillator = new Pizzicato.Sound({
     options: {
         type: oscillatorType,
         frequency: 220
-        
     }
 
 });
@@ -84,9 +118,6 @@ const oscillatorb = new Pizzicato.Sound({
     }         
    
 });
-
-
-
     // Get the theremin div from the html
     const theremin = document.getElementById("thereminZone");
 
@@ -106,4 +137,4 @@ const oscillatorb = new Pizzicato.Sound({
     });
 }
 
-window.onload = runAfterLoadingPage;
+window.onload = runAfterLoadingPage();

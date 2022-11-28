@@ -25,15 +25,31 @@
         the browser.</p>
     <div id="thereminZone"> </div>
     <br>
-    <div id="notefrequency"> Your Note Frequency is + notefrequency</div>
-    <div id="notename"> notename </div>
-    <div id="frequencyrange"> Frequency Range is + minfrequency + to + maxfrequency </div>
+
+    <div id="checkbox">
+    <label> <h3>Autotune: </h3>
+        <p> Try out the autotune! </p>
+        <input type="checkbox" id="mycheck"> 
+        <br><br>
+    </label>
+    </div>
+
+    <!-- broken, still not returning the note variables-->
+    <div id="frequency"></div>
+    <div id="note"> </div>
+    <div id="frequencyrange"></div>
     <br>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myCheck");
+          x.checked = true;
+        }
+        </script>
 </body>
 
 <form method="GET" id="musicform">
     <fieldset>
-    <legend>Theramin Modulator</legend>
+    <legend>Theremin Modulator</legend>
     
     <label for="semitone">Choose one of the following intervals:</label>
     <select name="semitone" id="semitone">
@@ -58,8 +74,7 @@
     <label for="maxfrequency">Max Frequency Range (440-1760Hz):</label>
     <input type="number" id="maxfrequency" name="maxfrequency" min="44s0" max="1760" value="440">
 
-    <input type="submit" value="Reload Theramin">
+    <input type="submit" value="Reload Theremin">
 </fieldset>
 </form>
-
 </html>
