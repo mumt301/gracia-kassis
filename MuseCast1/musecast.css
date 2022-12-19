@@ -1,0 +1,32 @@
+body {
+    background-image: url("img/bggif1.gif") ;
+    display: hidden;
+    }
+    .show {
+        display: block;
+    }
+    
+#weather-fall {
+    background-image: url("img/bggif2.gif");
+    display: hidden;
+    }
+    .show {
+        display: block;
+    }
+
+#weather-spring {
+    background-image: url("img/bggif3.gif");
+    display: hidden;
+    }
+    .show {
+        display: block;
+    }
+
+#weather-summer{
+    background-image: url("img/bggif3.gif");
+    display: hidden;
+    }
+    .show {
+        display: block;
+    }
+        
