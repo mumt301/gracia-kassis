@@ -14,6 +14,7 @@ button.addEventListener("click", () => {
     //call the UI method/s/
     ui.populateUI(data);
     //call saveToLS so that the data can be used (hopefully)
+    ui.getPlaylist(data);
     ui.saveToLS(data);
   });
 });
@@ -24,3 +25,5 @@ window.addEventListener("DOMContentLoaded", () => {
   const dataSaved = ui.getFromLS();
   ui.populateUI(dataSaved);
 });
+
+
