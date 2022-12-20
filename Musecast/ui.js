@@ -31,26 +31,26 @@ getPlaylist(data){
   console.log("Inside getPlaylist");
     if (data.main.temp <= 278) {
       playlistdiv.innerHTML = 'Its winter!';
-      playlistdiv.innerHTML = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0NCP9kXhvm6RGYjAxQGFeP?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+      playlistdiv.innerHTML = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2UZ2EFB2aeZ6eBdDpCJ2gv?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
       //search embed webpage inside div 
       document.body.style.backgroundImage = "url('img/bggif1.gif')";
 
 } else if (data.main.temp > 278 && data.main.temp <= 283 ){
       playlistdiv.innerHTML = 'Its fall!';
-      playlistdiv.innerHTML = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7mnXOgUBIh8M3oY9HWVW2S?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+      playlistdiv.innerHTML = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4wkJuarZanjEMCfSAtn1d2?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
       //search embed webpage inside div 
       document.body.style.backgroundImage = "url('img/bggif2.gif')";
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundSize = "cover";
 } else if (data.main.temp > 283 && data.main.temp <= 293 ){
       playlistdiv.innerHTML = 'Its spring!';
-      playlistdiv.innerHTML = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2ERi93tGm8vlCwt1lrbmd8?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+      playlistdiv.innerHTML = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4gG8VL4dHmhfMpyhiK5ZFg?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
       //search embed webpage inside div 
       document.body.style.backgroundImage = "url('img/bggif3.gif')";
       document.body.style.backgroundSize = "cover";
 } else if (data.main.temp > 293 ){
       playlistdiv.innerHTML = 'Its summer!';
-      playlistdiv.innerHTML = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4ZUn5XgJ3uWfAWrtgTwnCf?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+      playlistdiv.innerHTML = '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5RNArhFTNskvG181Vm93HR?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
       //search embed webpage inside div 
       document.body.style.backgroundImage = "url('img/bggif4.gif')";
       document.body.style.backgroundSize = "cover";
